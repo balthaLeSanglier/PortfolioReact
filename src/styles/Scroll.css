@@ -1,0 +1,16 @@
+.hidden {
+  opacity: 0;
+  transform: translateY(20px); /* Déplacer l'élément vers le bas de 20px initialement */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition de l'opacité et du déplacement */
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0); /* Retour à la position d'origine */
+}
+
+.not-visible {
+  opacity: 0;
+  transform: translateY(-20px); /* Déplacer l'élément vers la gauche de 20px lors de la disparition */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition de l'opacité et du déplacement */
+}
