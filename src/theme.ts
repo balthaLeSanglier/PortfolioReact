@@ -1,6 +1,16 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+      xxl:2000,
+    },
+  },
   palette: {
     primary: {
       main: 'rgb(104, 219, 104)', // Vert clair comme couleur principale
@@ -16,8 +26,11 @@ const theme = createTheme({
       primary: '#333333', // Couleur de texte principale
       secondary: '#777777', // Couleur de texte secondaire
     },
+    insaRouge:{
+      main: '#ff7e75',
+    },
     iutOrange: {
-      main: 'rgb(255, 165, 0)', // Exemple de couleur orange
+      main: 'rgb(255, 201, 101)', // Exemple de couleur orange
     },
   },
   typography: {
@@ -27,7 +40,9 @@ const theme = createTheme({
     },
     h2: {
       fontSize: '2rem',
-      fontWeight: 500,
+      fontWeight: 800,
+      textAlign:'center',
+      marginBottom:"5%",
     },
     body1: {
       fontSize: '1rem',

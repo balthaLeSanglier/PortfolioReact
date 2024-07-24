@@ -1,0 +1,19 @@
+.ArrowNextButton {
+    position: absolute;
+    right: -5%;
+    top:50%;
+    background-color: white;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+    z-index: 2;
+}
+
+.ArrowPreviousButton {
+    position: absolute;
+    left: -5%;
+    top:50%;
+    background-color: white;
+    border-radius: 50%;
+    transform: rotate(90deg);
+    z-index: 2;
+}

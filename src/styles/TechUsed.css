@@ -1,0 +1,15 @@
+.techUsed {
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    padding-inline: 0.5rem;
+
+    background-color: #ededed;
+    border: 0.1rem solid #ededed;
+transition: 0.5s;
+}
+
+.techUsed:hover {
+    border-radius: 0rem;
+    background-color: #ffffff;
+    border: 0.1rem solid #ededed;
+}

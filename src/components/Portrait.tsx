@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import logo from '../assests/logo.jpg';
-import { Card, CardContent, CardMedia, Typography, CardActions, Button, Stack, } from '@mui/material';
-import '../styles/Portrait.css'
-import RandomColorText from './Name';
+import { Button, Card, CardActions, CardContent, CardMedia, Stack, Typography, useMediaQuery, } from '@mui/material';
+import React from 'react';
+import { LiaLinkedin } from 'react-icons/lia';
+import logo from '../assets/logo.jpg';
+import '../styles/Portrait.css';
 import ScrollColorText from './Name';
 import ScrollReveal from './ScrollReaveal';
 
 const Portrait: React.FC = () => {
-
+    const matches = useMediaQuery('(min-width:600px)');
 
     return (
-        <section className='portrait'>
+        <section className='portrait' id="Portrait">
             <ScrollReveal>
                 <Stack
-                    direction="row"
-                    justifyContent="space-evenly"
-                    alignItems="stretch"
-                    spacing={2}
+                    direction={matches ? "row" : "column"}
+                    justifyContent={matches ? "space-between" : "center"}
+                    alignItems={matches ? "center" : "center"}
+                    spacing={matches ? 10 : 0}
+                    flexWrap="nowrap"
                 >
                     <Stack
                         direction="column"
@@ -24,16 +25,19 @@ const Portrait: React.FC = () => {
                         alignItems='flex-start'
                         spacing={2}
                     >
-                        <Typography variant="h2">
-                            Bonjour, Bienvenu dans mon portfolio
+                        <Typography display='inline' variant="h2" textAlign={'left'}>
+                            <ScrollColorText></ScrollColorText>
                         </Typography>
-                        <Typography display='inline' variant="h2">
-                            Je suis  <ScrollColorText></ScrollColorText>
+                        <Typography variant='subtitle1' color={"text.secondary"} textAlign={'justify'}>
+                            Alternant au sein du groupe Casino, futur étudiant INSA. 
+                            Je vous invite à découvrir mon profil à travers mon parcours, mes compétences et mes projets.
+
                         </Typography>
+                        
                     </Stack>
-                    <Card sx={{ maxWidth: 345, margin: '20px auto' }}>
+                    <Card sx={{ minWidth:"40%", margin: '20px auto' }}>
                         <CardMedia
-                            component="img"
+                            component="img" 
                             height="140"
                             image={logo}
                             alt="Profile Photo"
@@ -43,13 +47,18 @@ const Portrait: React.FC = () => {
                                 Balthazar Muhlstein
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Actuellement étudiant, je vous invite à découvrir mon profil Linkedin via le bouton ci-dessous
+                                Connectons nous sur Linkedin !
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button variant="contained" size="large" color="primary" href="https://www.linkedin.com/in/balthazar-muhlstein-5a083a222/" target="_blank">
-                                LinkedIn
-                            </Button>
+                                <Button variant="contained" size="large" color="primary" href="https://www.linkedin.com/in/balthazar-muhlstein-5a083a222/" target="_blank">
+                                <Stack justifyContent={'space-between'} alignItems={'center'} direction={'row'} width={"100%"} gap={1}>
+
+                                    LinkedIn
+                                    <LiaLinkedin size={30}/>
+                                    </Stack>
+
+                                </Button>
                         </CardActions>
                     </Card>
                 </Stack>

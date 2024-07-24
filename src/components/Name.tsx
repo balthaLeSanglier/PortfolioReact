@@ -1,7 +1,7 @@
 
 
-import React, { useEffect, useState } from 'react';
 import { Typography } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 
 const ScrollColorText: React.FC = () => {
     const [color, setColor] = useState<string>('#006400'); // Initial dark green color

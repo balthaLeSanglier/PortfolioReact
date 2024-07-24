@@ -1,0 +1,12 @@
+/* @media (min-width: 600px) {
+    .homeBody {
+        margin-inline: 20%;
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 600px){
+    .homeBody {
+        margin-inline:0;
+    }
+} */

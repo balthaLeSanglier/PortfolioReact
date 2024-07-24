@@ -1,0 +1,53 @@
+.displayDescriptionButton {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.displayDescriptionButtonPortable {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 4;
+    border: 0.3px black solid;
+}
+
+
+section {
+    scroll-margin: 75px;
+  }
+
+.DescriptionProjet {
+    background-color: white;
+    padding: 1%;
+}
+
+.Project {
+    transition: 0.5;
+}
+
+.DescriptionHide {
+    transition: 0.5s;
+    z-index: 0;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.DescriptionDisplay {
+    transition: 0.5s;
+    opacity: 1;
+    z-index: 0;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%);
+}

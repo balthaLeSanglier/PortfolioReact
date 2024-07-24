@@ -1,0 +1,12 @@
+.SkillsPanel {
+    background-color: #ededed;
+    padding: 1%;
+    border-radius: 1rem;
+    max-width: 100%;
+}
+
+.flex-container::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
