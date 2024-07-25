@@ -9,7 +9,6 @@ import TechUsed from "./TechUsed";
 
 type Props = {
     image: string
-    imageTypeProjet: string
     title: string
     techs: string[]
     skills: string[]
@@ -18,7 +17,7 @@ type Props = {
     gitLink?: string
 };
 
-const Project: React.FC<Props> = ({ image, imageTypeProjet, title, techs, skills, description, icon, gitLink }) => {
+const Project: React.FC<Props> = ({ image, title, techs, skills, description, icon, gitLink }) => {
     const matches = useMediaQuery('(min-width:600px)');
     const [displayDescription, setDisplayDescription] = useState(false)
     const [roundCorner, setRoundCorner] = useState(16)
