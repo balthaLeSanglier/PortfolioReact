@@ -1,5 +1,5 @@
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
-import { Box, Collapse, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tooltip, Typography } from "@mui/material";
+import { Box, Collapse, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tooltip, Typography, useMediaQuery } from "@mui/material";
 import { green, orange, red } from "@mui/material/colors";
 import React, { ReactNode } from "react";
 import { FaBrush, FaCheck, FaExternalLinkAlt, FaPencilRuler } from "react-icons/fa";
@@ -51,6 +51,7 @@ function createData(
 function Row(props: { row: ReturnType<typeof createData> }) {
     const { row } = props;
     const [open, setOpen] = React.useState(false);
+    const matches = useMediaQuery('(min-width:600px)');
 
     const handleClickOnRow = () => {
         console.log("salut")
@@ -84,9 +85,9 @@ function Row(props: { row: ReturnType<typeof createData> }) {
                         {open ? <ArrowUpward /> : <ArrowDownward />}
                     </IconButton>
                 </TableCell>
-                <TableCell component="th" scope="row">
+                {matches ? <TableCell component="th" scope="row">
                     {row.code}
-                </TableCell>
+                </TableCell> : ""}
                 <TableCell align="left">{row.name}</TableCell>
                 <TableCell align="center">
                     <Typography color={getColorForLevel(row.level)}>
@@ -154,6 +155,9 @@ function Row(props: { row: ReturnType<typeof createData> }) {
 }
 
 const CompetencyRealiserTable = () => {
+
+    const matches = useMediaQuery('(min-width:600px)');
+
     return (
         <section>
             <span>
@@ -164,7 +168,7 @@ const CompetencyRealiserTable = () => {
                     <TableHead>
                         <TableRow>
                             <TableCell />
-                            <TableCell>Code</TableCell>
+                            {matches ? <TableCell> code</TableCell> : ""}
                             <TableCell align="left">Nom</TableCell>
                             <TableCell align="center">Niveau</TableCell>
                         </TableRow>

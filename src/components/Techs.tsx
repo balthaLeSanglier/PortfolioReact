@@ -39,10 +39,8 @@ const Skills: React.FC = () => {
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
                         <TechsPanel title="Base de Donnée">
-                            <CustomCircularProgress content={<SiPostgresql size={60} />} progress={100} title={"PostgreSQL"} />
                             <CustomCircularProgress content={<SiMysql size={60} />} progress={100} title={"MySQL"} />
                             <CustomCircularProgress content={<SiOracle size={60} />} progress={100} title={"Oracle SQL"} />
-                            <CustomCircularProgress content={<FaJava size={60} />} progress={100} title={"JDBC"} />
                             <CustomCircularProgress content={<SiMongodb size={60} />} progress={100} title={"MongoDB"} />
                             <CustomCircularProgress content={<SiMongoose size={60} />} progress={100} title={"Mongoose"} />
                             <CustomCircularProgress content={<SiNeo4J size={60} />} progress={100} title={"Neo4J"} />

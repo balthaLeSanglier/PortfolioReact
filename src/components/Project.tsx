@@ -9,6 +9,7 @@ import TechUsed from "./TechUsed";
 
 type Props = {
     image: string
+    imageTypeProjet: string
     title: string
     techs: string[]
     skills: string[]
@@ -17,7 +18,7 @@ type Props = {
     gitLink?: string
 };
 
-const Project: React.FC<Props> = ({ image, title, techs, skills, description, icon, gitLink }) => {
+const Project: React.FC<Props> = ({ image, imageTypeProjet, title, techs, skills, description, icon, gitLink }) => {
     const matches = useMediaQuery('(min-width:600px)');
     const [displayDescription, setDisplayDescription] = useState(false)
     const [roundCorner, setRoundCorner] = useState(16)
@@ -39,7 +40,8 @@ const Project: React.FC<Props> = ({ image, title, techs, skills, description, ic
         }
     }
     return (
-        <section id="projects" className="Project" style={{ position: "relative" }}>
+        <section className="Project" style={{ position: "relative" }}>
+            {/* <img src={imageTypeProjet}/> */}
             <div className={matches ? "displayDescriptionButton" : "displayDescriptionButtonPortable"}>
                     <IconButton onClick={onClick} >
                         <ArrowDownward style={{ transform: displayDescription ? "rotate(-180deg)" : "rotate(0deg)", transition: "0.5s" }} />

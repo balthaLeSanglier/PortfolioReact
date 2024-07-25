@@ -154,6 +154,8 @@ const saeS3: Project = {
         {code:"AC25.01", level:1},
         {code:"AC25.02", level:2},
         {code:"AC25.03", level:2},
+        {code:"AC25.04", level:2},
+
 
         {code:"AC26.01", level:2},
         {code:"AC26.02", level:2},
@@ -184,6 +186,7 @@ const saeProjetMobile: Project = {
         {code:"AC25.01", level:2},
         {code:"AC25.02", level:2},
         {code:"AC25.03", level:2},
+        {code:"AC25.04", level:2},
 
         {code:"AC26.01", level:3},
         {code:"AC26.02", level:2},
@@ -221,6 +224,7 @@ listProjet.push(saeSymfony)
 
 const saeProjetStage: Project = {
     name:"Projet de Stage",
+    gitLink:"https://drive.google.com/file/d/1W6RWR0iMs2j1GJ8Qv9wfS4vq-hAxSpSH/view?usp=sharing",
     competencesProjet: [
         {code:"AC21.01", level:3},
         {code:"AC21.02", level:3},
@@ -239,6 +243,8 @@ const saeProjetStage: Project = {
         {code:"AC25.01", level:4},
         {code:"AC25.02", level:3},
         {code:"AC25.03", level:3},
+        {code:"AC25.04", level:3},
+
 
         {code:"AC26.01", level:3},
         {code:"AC26.02", level:3},
@@ -250,6 +256,7 @@ listProjet.push(saeProjetStage)
 
 const saeCorrectifRGX: Project = {
     name:"Correctif RGX",
+    gitLink:"https://drive.google.com/file/d/1LShF32F4XFelj15gc2DZc_EO-_ESWlD6/view?usp=sharing",
     competencesProjet: [
         {code:"AC31.01", level:4},
         {code:"AC31.02", level:4},
@@ -269,6 +276,7 @@ listProjet.push(saeCorrectifRGX)
 
 const saeProjetTuteure: Project = {
     name:"Projet Tuteuré",
+    gitLink:"https://drive.google.com/file/d/1LShF32F4XFelj15gc2DZc_EO-_ESWlD6/view?usp=sharing",
     competencesProjet: [
         {code:"AC31.01", level:4},
         {code:"AC31.02", level:4},
@@ -288,6 +296,7 @@ listProjet.push(saeProjetTuteure)
 
 const saeOutilsHRA: Project = {
     name:"Outils HRA",
+    gitLink:"https://drive.google.com/file/d/1LShF32F4XFelj15gc2DZc_EO-_ESWlD6/view?usp=sharing",
     competencesProjet: [
         {code:"AC31.01", level:4},
         {code:"AC31.02", level:3},
@@ -307,6 +316,7 @@ listProjet.push(saeOutilsHRA)
 
 const saeFacturesInter: Project = {
     name:"Factures Intermarché",
+    gitLink:"https://drive.google.com/file/d/1LShF32F4XFelj15gc2DZc_EO-_ESWlD6/view?usp=sharing",
     competencesProjet: [
         {code:"AC31.01", level:4},
         {code:"AC31.02", level:2},
