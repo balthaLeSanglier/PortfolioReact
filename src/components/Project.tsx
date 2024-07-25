@@ -57,7 +57,7 @@ const Project: React.FC<Props> = ({ image, title, techs, skills, description, ic
                                 <Typography variant="h5" alignItems={"center"} display={"flex"}>{icon}</Typography>
                                 <Typography variant="h5">{title}</Typography>
                             </Stack>
-                            <Tooltip title={gitLink ? "Accès aux projet GIT" : "Projet Confidentiel, Accès aux traces impossible"} placement="right-start" arrow slotProps={{
+                            <Tooltip title={gitLink ? "Accès aux traces" : "Projet Confidentiel, Accès aux traces impossible"} placement="right-start" arrow slotProps={{
                                 popper: {
                                     modifiers: [
                                         {

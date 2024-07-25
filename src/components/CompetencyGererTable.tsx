@@ -6,10 +6,12 @@ import { CiSquareQuestion } from "react-icons/ci";
 import { FaCheck, FaExternalLinkAlt, FaFastForward, FaLock, FaPencilRuler, FaQuestion, FaTable } from "react-icons/fa";
 import { MdSchema } from "react-icons/md";
 import listProjet, { CompetencesProjet, Project } from "./ProjectList";
+import "../styles/CompetencyTable.css"
 
 function findCompetenceByCode(project: Project, code: string): CompetencesProjet | undefined {
     return project.competencesProjet.find(competence => competence.code === code);
 }
+
 
 
 
@@ -45,8 +47,13 @@ function Row(props: { row: ReturnType<typeof createData> }) {
     const { row } = props;
     const [open, setOpen] = React.useState(false);
 
+    const handleClickOnRow = () => {
+        console.log("salut")
+        setOpen(!open)
+    }
+
     const getColorForLevel = (level: number) => {
-        console.log(level)
+        
         if (level === 1) return green[200];
         if (level === 2) return green[400];
         if (level === 3) return green[900];
@@ -63,12 +70,11 @@ function Row(props: { row: ReturnType<typeof createData> }) {
 
     return (
         <React.Fragment>
-            <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+            <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}  onClick={() => handleClickOnRow()} className="CompetencyTableRow">
                 <TableCell>
                     <IconButton
                         aria-label="expand row"
                         size="small"
-                        onClick={() => setOpen(!open)}
                     >
                         {open ? <ArrowUpward /> : <ArrowDownward />}
                     </IconButton>
@@ -112,7 +118,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
                                                             <FaCheck size={"2rem"} />
                                                         </Typography>
                                                     </TableCell>
-                                                    <TableCell align="right"><Tooltip title={projectRow.gitLink ? "Accès aux projet GIT" : "Projet Confidentiel, Accès aux traces impossible"} placement="right-start" arrow slotProps={{
+                                                    <TableCell align="right"><Tooltip title={projectRow.gitLink ? "Accès aux traces" : "Projet Confidentiel, Accès aux traces impossible"} placement="right-start" arrow slotProps={{
                                                         popper: {
                                                             modifiers: [
                                                                 {
@@ -125,7 +131,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
                                                         },
                                                     }}>
                                                         <Typography color={projectRow.gitLink ? "primary" : "text.secondary"}>
-                                                            <a href={projectRow.gitLink} color={projectRow.gitLink ? "text.primary" : "text.secondary"}><FaExternalLinkAlt color={projectRow.gitLink ? "black" : "text.secondary"} /></a>
+                                                            <a href={projectRow.gitLink} target="_blank" color={projectRow.gitLink ? "text.primary" : "text.secondary"}><FaExternalLinkAlt color={projectRow.gitLink ? "black" : "text.secondary"} /></a>
                                                         </Typography>
                                                     </Tooltip></TableCell>
                                                 </TableRow>

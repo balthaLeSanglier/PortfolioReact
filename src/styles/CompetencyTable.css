@@ -1,3 +1,8 @@
 .CompetencyTable {
     margin-inline: 1%;
 }
+
+.CompetencyTableRow:hover {
+    background-color: #ededed;
+    cursor: pointer;
+}

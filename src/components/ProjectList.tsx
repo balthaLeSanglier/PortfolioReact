@@ -40,6 +40,7 @@ listProjet.push(saeGraphMap)
 
 const saeAlgo: Project = {
     name: "Rapport Algorithmique",
+    gitLink:"https://drive.google.com/file/d/1DE1vmTCpe4M6h_RfHvgNkmikDQQR7tqb/view?usp=sharing",
     competencesProjet: [
         { code: "AC12.01", level: 3 },
         { code: "AC12.02", level: 3 },
@@ -48,8 +49,9 @@ const saeAlgo: Project = {
 };
 listProjet.push(saeAlgo)
 
-const saeVm: Project = {
+const saeGuideInstallation: Project = {
     name: "Guide d'installation d'un poste Windows",
+    gitLink:"https://drive.google.com/file/d/1NqS6cP1yYiDDyzXds-b9kntSlvm0WXpw/view?usp=sharing",
     competencesProjet: [
         { code: "AC13.01", level: 3 },
         { code: "AC13.02", level: 3 },
@@ -57,10 +59,11 @@ const saeVm: Project = {
         { code: "AC13.04", level: 2 },
     ]
 };
-listProjet.push(saeVm)
+listProjet.push(saeGuideInstallation)
 
 const saeSql: Project = {
     name: "Projet BD : Gestion de stage",
+    gitLink:"https://drive.google.com/file/d/1IoQBmUkR3gykbUZzymg5wBM4BdND4saC/view?usp=sharing",
     competencesProjet: [
         { code: "AC14.01", level: 3 },
         { code: "AC14.02", level: 1 },
@@ -71,6 +74,7 @@ listProjet.push(saeSql)
 
 const saeWeb: Project = {
     name: "Site de présentation du B.U.T.",
+    gitLink:"http://p2102297.pages.univ-lyon1.fr/sae_web-muhlstein-balthazar/index.html",
     competencesProjet: [
         { code: "AC15.01", level: 2 },
         { code: "AC15.02", level: 1 },
@@ -81,6 +85,7 @@ listProjet.push(saeWeb)
 
 const saeEco: Project = {
     name: "Rapport R.S.E. d'une entreprise",
+    gitLink: "https://drive.google.com/file/d/1crlkE79LIhaTSfSDCQS_jvQNVdSLiW50/view?usp=sharing",
     competencesProjet: [
         { code: "AC16.01", level: 2 },
         { code: "AC16.02", level: 2 },
@@ -92,6 +97,7 @@ listProjet.push(saeEco)
 
 const saeReseau: Project = {
     name: "Installation d'un service réseau",
+    gitLink:"https://drive.google.com/file/d/1EH-oikwVluSL2MPnSjZ7r0kN6VFYOlWs/view?usp=sharing",
     competencesProjet: [
         { code: "AC13.01", level: 3 },
         { code: "AC13.02", level: 3 },
@@ -103,6 +109,7 @@ listProjet.push(saeReseau)
 
 const saeBI: Project = {
     name: "Exploitation d'une base de donnée (B.I.)",
+    gitLink: "https://drive.google.com/drive/folders/1BlzTU3O4pRuyXdzlqoUjonT7B33xC7lA?usp=sharing",
     competencesProjet: [
         { code: "AC14.01", level: 3 },
         { code: "AC14.02", level: 4 },
