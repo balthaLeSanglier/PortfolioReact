@@ -54,7 +54,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
         console.log(level)
         if (level === 1) return orange[200];
         if (level === 2) return orange[400];
-        if (level === 3) return orange[700];
+        if (level === 3) return orange[900];
         return red;
     };
 

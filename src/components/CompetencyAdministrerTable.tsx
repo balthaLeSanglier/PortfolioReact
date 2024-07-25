@@ -48,7 +48,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
         console.log(level)
         if (level === 1) return yellow[200];
         if (level === 2) return yellow[400];
-        if (level === 3) return yellow[700];
+        if (level === 3) return yellow[900];
         return red;
     };
 
