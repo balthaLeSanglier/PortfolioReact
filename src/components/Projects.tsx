@@ -5,7 +5,10 @@ import logo from "../assets/logo.jpg";
 import rgxImage1 from "../assets/rgx-Image1.png";
 import rgxImage2 from "../assets/rgx-Image2.png";
 import timeOffImage from "../assets/timeOffImage.png";
+import hraImage from "../assets/hraImage.png";
+
 import Project from "./Project";
+
 
 import { LocalGroceryStore, WebOutlined } from "@mui/icons-material";
 import { FaToolbox } from "react-icons/fa";
@@ -63,8 +66,7 @@ const Projects: React.FC = () => {
           </Grid>
           <Grid item xxl={6} lg={12}>
             <Project description="truc"
-              gitLink="wikipedia.com"
-              image={logo}
+              image={hraImage}
               icon={<FaToolbox />}
               title="Outils HRA"
               techs={["Java", "Apache POI", "JavaFX", "MultiThreading", "Maven", "GIT"]}
