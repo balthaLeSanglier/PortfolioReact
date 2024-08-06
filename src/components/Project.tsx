@@ -6,18 +6,10 @@ import "../styles/Project.css";
 import DescriptionProjet from "./DescriptionProjet";
 import SkillLearned from "./SkillLearned";
 import TechUsed from "./TechUsed";
+import { ProjectType } from "./ProjectList";
 
-type Props = {
-    image: string
-    title: string
-    techs: string[]
-    skills: string[]
-    description: string
-    icon: ReactNode
-    gitLink?: string
-};
 
-const Project: React.FC<Props> = ({ image, title, techs, skills, description, icon, gitLink }) => {
+const Project: React.FC<ProjectType> = ({ image, title, techs, skills, description, icon, gitLink }) => {
     const matches = useMediaQuery('(min-width:600px)');
     const [displayDescription, setDisplayDescription] = useState(false)
     const [roundCorner, setRoundCorner] = useState(16)
@@ -39,16 +31,15 @@ const Project: React.FC<Props> = ({ image, title, techs, skills, description, ic
         }
     }
     return (
-        <section className="Project" style={{ position: "relative" }}>
-            {/* <img src={imageTypeProjet}/> */}
+        <section className="Project" style={{ position: "relative", width:"100%"}}>
             <div className={matches ? "displayDescriptionButton" : "displayDescriptionButtonPortable"}>
                     <IconButton onClick={onClick} >
                         <ArrowDownward style={{ transform: displayDescription ? "rotate(-180deg)" : "rotate(0deg)", transition: "0.5s" }} />
                     </IconButton>
                 </div>
-            <Grid container justifyContent={"center"} zIndex={1} bgcolor="white" borderRadius={4} overflow="hidden" position={"relative"} style={{ transition: "0.5s", borderBottomLeftRadius: roundCorner, borderBottomRightRadius: roundCorner, marginBottom: descriptionHeight }}>
-                <Grid item xs={12} sm={4}  >
-                    <img src={image} width="100%" height={"100%"} />
+            <Grid container width={"100%"} justifyContent={"center"} zIndex={1} bgcolor="white" borderRadius={4} overflow="hidden" position={"relative"} style={{ transition: "0.5s", borderBottomLeftRadius: roundCorner, borderBottomRightRadius: roundCorner, marginBottom: descriptionHeight }}>
+                <Grid item xs={12} sm={4}  sx={{ backgroundImage: `url(${image})`, backgroundSize:"cover", backgroundPosition:"center top"}}>
+                    
                 </Grid>
                 <Grid item xs={12} sm={8} >
                     <Stack height="100%" p={2} spacing={2}>
@@ -71,7 +62,7 @@ const Project: React.FC<Props> = ({ image, title, techs, skills, description, ic
                                 },
                             }}>
                                 <Typography color={gitLink ? "primary" : "text.secondary"}>
-                                    <a href={gitLink} color={gitLink ? "text.primary" : "text.secondary"}><FaExternalLinkAlt color={gitLink ? "black" : "text.secondary"} /></a>
+                                    <a target="_blank" href={gitLink} color={gitLink ? "text.primary" : "text.secondary"}><FaExternalLinkAlt color={gitLink ? "black" : "text.secondary"} /></a>
                                 </Typography>
                             </Tooltip>
 
@@ -90,7 +81,7 @@ const Project: React.FC<Props> = ({ image, title, techs, skills, description, ic
                     </Stack>
                 </Grid>
             </Grid>
-            <div ref={descriptionProjet} className={displayDescription ? "DescriptionDisplay" : "DescriptionHide"} style={{ maxHeight: "200px", overflow: "scroll" }}>
+            <div ref={descriptionProjet} className={displayDescription ? "DescriptionDisplay" : "DescriptionHide"} style={{ maxHeight: "200px", overflow: "hidden" }}>
                 <DescriptionProjet description={description} />
             </div>
         </section>

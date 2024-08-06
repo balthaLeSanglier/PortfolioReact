@@ -6,6 +6,12 @@ type Props = {
 
 const ScrollReveal: React.FC<Props> = ({ children }) => {
   const elementRef = useRef<HTMLDivElement | null>(null);
+  let options = {        
+    rootMargin: "0px 0px-200px 0px", 
+    // or `0px 0px ${window.innerHeight / 2} 0px` 
+    // for detect middle screen height
+    threshold: 0
+}
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,7 +28,7 @@ const ScrollReveal: React.FC<Props> = ({ children }) => {
           }
         }
       },
-      { threshold: 0.1 }
+      {rootMargin:'-100px 0px -100px 0px'}
     );
 
     if (elementRef.current) {

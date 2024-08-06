@@ -4,10 +4,10 @@ import { blue, green, grey, orange, red } from "@mui/material/colors";
 import React, { ReactNode } from "react";
 import { FaCheck, FaCompass, FaExternalLinkAlt, FaHandshake, FaLightbulb, FaNetworkWired, FaPenAlt, FaPuzzlePiece } from "react-icons/fa";
 import { FaChartGantt, FaUsersGear } from "react-icons/fa6";
-import listProjet, { CompetencesProjet, Project } from "./ProjectList";
+import listProjet, { CompetencesProjetType, ProjectType } from "./ProjectList";
 import "../styles/CompetencyTable.css"
 
-function findCompetenceByCode(project: Project, code: string): CompetencesProjet | undefined {
+function findCompetenceByCode(project: ProjectType, code: string): CompetencesProjetType | undefined {
     return project.competencesProjet.find(competence => competence.code === code);
 }
 
@@ -34,7 +34,7 @@ function createData(
     code: string,
     name: string,
     level: number,
-    projects: Project[],
+    projects: ProjectType[],
     pictogram:ReactNode
 ) {
     return {
@@ -112,9 +112,9 @@ function Row(props: { row: ReturnType<typeof createData> }) {
                                         const competence = findCompetenceByCode(projectRow, row.code);
                                         if (competence) {
                                             return (
-                                                <TableRow key={projectRow.name}>
+                                                <TableRow key={projectRow.title}>
                                                     <TableCell component="th" scope="row">
-                                                        {projectRow.name}
+                                                        {projectRow.title}
                                                     </TableCell>
                                                     <TableCell align="center">
                                                         <Typography color={getColorForCompetencyMastery(competence.level)}>
