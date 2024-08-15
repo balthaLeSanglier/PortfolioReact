@@ -26,7 +26,7 @@ const Projects: React.FC = () => {
     }
   }
 
-  const displayedProjetcts = showAll ? reversedProjects : reversedProjects.slice(0, 10);
+  const displayedProjetcts = showAll ? reversedProjects : reversedProjects.slice(0, 5);
   return (
     <section id="Projects" ref={elementRef}>
       <ScrollReveal>

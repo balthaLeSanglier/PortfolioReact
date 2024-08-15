@@ -21,7 +21,8 @@ const Header: React.FC = () => {
         <a href="#Portrait">A propos</a>
         <a href="#Techs">Technologies</a>
         <a href="#Projects">Projets</a>
-        <a href="#contact">Contact</a>
+        <a href="#ComptencyTable">Tableau de compétence</a>
+        <a href="#Contact">Contact</a>
       </Menu>
     )
   }
@@ -36,7 +37,8 @@ const Header: React.FC = () => {
             <li><a href="#Portrait">A propos</a></li>
             <li><a href="#Techs">Technologies</a></li>
             <li><a href="#Projects">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#ComptencyTable">Tableau de compétence</a></li>
+            <li><a href="#Contact">Contact</a></li>
           </ul>
         </nav>
 
@@ -45,7 +47,8 @@ const Header: React.FC = () => {
             <li><a href="#Portrait">A propos</a></li>
             <li><a href="#Techs">Technologies</a></li>
             <li><a href="#Projects">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#ComptencyTable">Tableau de compétence</a></li>
+            <li><a href="#Contact">Contact</a></li>
           </ul>
         </nav>
       </header>

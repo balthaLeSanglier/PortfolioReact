@@ -51,7 +51,7 @@ const CompetencyTables = () => {
     prevArrow: <SamplePrevArrow />
     };
     return(
-        <section>
+        <section id="ComptencyTable">
             <ScrollReveal>
                 <span>
                     <Typography variant="h2">TABLEAUX DE COMPETENCES</Typography>

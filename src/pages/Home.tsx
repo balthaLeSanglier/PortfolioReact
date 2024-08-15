@@ -10,6 +10,8 @@ import Assets from '../components/Assets';
 import CompetencyRealiserTable from '../components/CompetencyRealiserTable';
 import CompetencyOptimiserTable from '../components/CompetencyOptimiserTable';
 import CompetencyTables from '../components/CompetencyTables';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
   return (
@@ -35,12 +37,12 @@ const Home: React.FC = () => {
           <Grid item xs={11} md={8}>
             <CompetencyTables />
           </Grid>
+          <Grid  item xs={11} md={8}>
+            <Contact></Contact>
+          </Grid>
         </Grid>
       </div>
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Comment me contacter...</p>
-      </section>
+      <Footer/>
     </div>
   );
 };
