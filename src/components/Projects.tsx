@@ -4,13 +4,14 @@ import Project from "./Project";
 
 import listProjet, { CompetencesProjetType, ProjectType } from "./ProjectList";
 import ScrollReveal from "./ScrollReaveal";
-import { FaCross, FaDotCircle } from "react-icons/fa";
 import { BsThreeDots } from "react-icons/bs";
 import { FaXmark } from "react-icons/fa6";
 
 const Projects: React.FC = () => {
   const [numberOfProjects, setNumberOfProjects] = useState(5);
-  const reversedProjects = listProjet.reverse();
+  const reversedProjects = listProjet.toReversed();
+  console.log(listProjet)
+  console.log(reversedProjects)
   const elementRef = useRef<HTMLDivElement | null>(null);
 
   const handleShowMore = () => {
