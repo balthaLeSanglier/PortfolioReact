@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { push as Menu } from 'react-burger-menu';
 import '../styles/Header.css';
 
-import { useMediaQuery } from '@mui/material';
+import { Typography, useMediaQuery } from '@mui/material';
 
 const Header: React.FC = () => {
   const matches = useMediaQuery('(min-width:600px)');
@@ -30,25 +30,64 @@ const Header: React.FC = () => {
     <section>
       <header className='pinedHeader'>
         <div className="logo">
-          <h1>Balthazar Muhlstein</h1>
+          <Typography variant='header' color={"text.primary"}>Balthazar Muhlstein</Typography>
         </div>
         <nav>
           <ul>
-            <li><a href="#Portrait">A propos</a></li>
-            <li><a href="#Techs">Technologies</a></li>
-            <li><a href="#Projects">Projets</a></li>
-            <li><a href="#ComptencyTable">Tableau de compétence</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li>
+              <a href="#Portrait">
+                <Typography variant="header">A propos</Typography>
+              </a>
+            </li>
+            <li>
+              <a href="#Techs">
+                <Typography variant="header">Technologies</Typography>
+              </a>
+            </li>
+            <li>
+              <a href="#Projects">
+                <Typography variant="header">Projets</Typography>
+              </a>
+            </li>
+            <li>
+              <a href="#ComptencyTable">
+                <Typography variant="header">Tableau de compétence</Typography>
+              </a>
+            </li>
+            <li>
+              <a href="#Contact">
+                <Typography variant="header">Contact</Typography>
+              </a>
+            </li>
           </ul>
         </nav>
-
         <nav className={`floatingHeader ${small ? 'appears' : 'hiddenMenu'}`}>
           <ul>
-            <li><a href="#Portrait">A propos</a></li>
-            <li><a href="#Techs">Technologies</a></li>
-            <li><a href="#Projects">Projets</a></li>
-            <li><a href="#ComptencyTable">Tableau de compétence</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li>
+              <a href="#Portrait">
+                <Typography variant="header">A propos</Typography>
+              </a>
+            </li>
+            <li>
+              <a href="#Techs">
+                <Typography variant="header">Technologies</Typography>
+              </a>
+            </li>
+            <li>
+              <a href="#Projects">
+                <Typography variant="header">Projets</Typography>
+              </a>
+            </li>
+            <li>
+              <a href="#ComptencyTable">
+                <Typography variant="header">Tableau de compétence</Typography>
+              </a>
+            </li>
+            <li>
+              <a href="#Contact">
+                <Typography variant="header">Contact</Typography>
+              </a>
+            </li>
           </ul>
         </nav>
       </header>

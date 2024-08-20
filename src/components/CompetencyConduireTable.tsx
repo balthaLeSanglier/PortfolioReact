@@ -98,7 +98,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
                             <Table size="small" aria-label="purchases">
                                 <TableHead>
                                     <TableRow>
-                                        <TableCell>Nom</TableCell>
+                                        <TableCell>Code</TableCell>
                                         <TableCell align="center">Niveau</TableCell>
                                         <TableCell align="right">Lien</TableCell>
                                     </TableRow>

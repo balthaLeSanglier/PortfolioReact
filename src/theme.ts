@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
+let theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
@@ -34,6 +34,13 @@ const theme = createTheme({
     },
   },
   typography: {
+    header: {
+      fontSize:"1rem",
+      fontWeight:650,
+      [createTheme().breakpoints.up('xl')]: {
+        fontSize: '1.5rem',
+      },
+    },
     h1: {
       fontSize: '2.5rem',
       fontWeight: 500,
@@ -43,9 +50,40 @@ const theme = createTheme({
       fontWeight: 800,
       textAlign:'center',
       marginBottom:"5%",
+      [createTheme().breakpoints.up('xl')]: {
+        fontSize: '3rem',
+      },
+    },
+    h5: {
+      fontSize: '1.5rem',
+      marginBottom:"5%",
+      [createTheme().breakpoints.up('xl')]: {
+        fontSize: '2rem',
+      },
+    },
+    subtitle1: {
+      fontSize:"1rem",
+      [createTheme().breakpoints.up('xl')]: {
+        fontSize: '1.5rem',
+      },
     },
     body1: {
       fontSize: '1rem',
+      [createTheme().breakpoints.up('xl')]: {
+        fontSize: '1.25rem',
+      },
+    },
+    body2: {
+      fontSize: '1rem',
+      [createTheme().breakpoints.up('xl')]: {
+        fontSize: '1rem',
+      },
+    },
+    body3: {
+      fontSize: '1.25rem',
+      [createTheme().breakpoints.up('xl')]: {
+        fontSize: '1.5rem',
+      },
     },
     button: {
       textTransform: 'none', // Retire la transformation en majuscules
@@ -69,5 +107,16 @@ const theme = createTheme({
     },
   },
 });
+
+theme = createTheme({
+  ...theme,
+  typography: {
+    ...theme.typography,
+    [theme.breakpoints.up('xl')]: {
+      htmlFontSize: 40,
+    },
+  },
+});
+
 
 export default theme;

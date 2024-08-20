@@ -27,8 +27,8 @@ const ScrollColorText: React.FC = () => {
     }, []);
   
     return (
-      <Typography variant="h2" display="inline" style={{ color: color }}>
-        Balthazar Muhlstein
+      <Typography variant="h2" display="inline" color={"text.primary"}>
+        BALTHAZAR MUHLSTEIN
       </Typography>
     );
   };

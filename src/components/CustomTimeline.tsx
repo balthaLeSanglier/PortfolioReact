@@ -24,7 +24,7 @@ const CustomTimeline: React.FC = () => {
                         <TimelineOppositeContent
                             sx={{ m: 'auto 0' }}
                             align="right"
-                            variant="body2"
+                            variant="body3"
                             color="text.secondary"
                         >
                             2024 -
@@ -40,14 +40,14 @@ const CustomTimeline: React.FC = () => {
                             <Typography variant="h6" component="span">
                                 INSA Lyon
                             </Typography>
-                            <Typography color="text.secondary">Etudes d'ingénieur au sein du département Télécom</Typography>
+                            <Typography color="text.secondary" variant="body1">Etudes d'ingénieur au sein du département Télécom</Typography>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineOppositeContent
                             sx={{ m: 'auto 0' }}
                             align="right"
-                            variant="body2"
+                            variant="body3"
                             color="text.secondary"
                         >
                             2023 - 2024
@@ -61,17 +61,17 @@ const CustomTimeline: React.FC = () => {
                         </TimelineSeparator>
                         <TimelineContent sx={{ py: '12px', px: 2 }}>
                             <Typography variant="h6" component="span">
-                                Groupe Casino
+                                Groupe Casino 
                             </Typography>
-                            <Typography color="text.secondary">Alternance au sein de la D.S.I. du Groupe Casino</Typography>
-                            <Typography color="text.secondary">Poste de développeur Java</Typography>
+                            <Typography color="text.secondary" variant="body1">Alternance au sein de la D.S.I. du Groupe Casino</Typography>
+                            <Typography color="text.secondary" variant="body1">Poste de développeur Java</Typography>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineOppositeContent
                             sx={{ m: 'auto 0' }}
                             align="right"
-                            variant="body2"
+                            variant="body3"
                             color="text.secondary"
                         >
                             2023
@@ -87,14 +87,14 @@ const CustomTimeline: React.FC = () => {
                             <Typography variant="h6" component="span">
                                 Groupe Casino
                             </Typography>
-                            <Typography color="text.secondary">Stage au sein de la D.S.I. du Groupe Casino</Typography>
+                            <Typography color="text.secondary" variant="body1">Stage au sein de la D.S.I. du Groupe Casino</Typography>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineOppositeContent
                             sx={{ m: 'auto 0' }}
                             align="right"
-                            variant="body2"
+                            variant="body3"
                             color="text.secondary"
                         >
                             2021-2024
@@ -110,7 +110,7 @@ const CustomTimeline: React.FC = () => {
                             <Typography variant="h6" component="span">
                                 I.U.T. Lyon 1
                             </Typography>
-                            <Typography color="text.secondary">B.U.T. Informatique, parcours Réalisation d'Application</Typography>
+                            <Typography color="text.secondary" variant="body1">B.U.T. Informatique, parcours Réalisation d'Application</Typography>
                         </TimelineContent>
                     </TimelineItem>
                 </Timeline>

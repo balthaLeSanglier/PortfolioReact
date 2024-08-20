@@ -10,7 +10,7 @@ const Asset: React.FC<Props> = ({ asset, title }) => {
     return (
         <Stack spacing={2} direction="column" alignItems={"center"} flex={1} width={"100%"}>
             {asset}
-            <Typography variant="h5" textAlign={"center"}>{title}</Typography>
+            <Typography variant="body3" textAlign={"center"}>{title}</Typography>
         </Stack>
     )
 }

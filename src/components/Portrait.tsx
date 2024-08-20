@@ -38,7 +38,7 @@ const Portrait: React.FC = () => {
                     <Card sx={{ minWidth:"40%", margin: '20px auto' }}>
                         <CardMedia
                             component="img" 
-                            height="140"
+                            height="250"
                             image={logo}
                             alt="Profile Photo"
                         />
@@ -46,15 +46,15 @@ const Portrait: React.FC = () => {
                             <Typography gutterBottom variant="h5" component="div">
                                 Balthazar Muhlstein
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography variant="body3" color="text.secondary">
                                 Connectons nous sur Linkedin !
                             </Typography>
                         </CardContent>
                         <CardActions>
                                 <Button variant="contained" size="large" color="primary" href="https://www.linkedin.com/in/balthazar-muhlstein-5a083a222/" target="_blank">
                                 <Stack justifyContent={'space-between'} alignItems={'center'} direction={'row'} width={"100%"} gap={1}>
-
-                                    LinkedIn
+                                    <Typography variant='body1'>LinkedIn</Typography>
+                                    
                                     <LiaLinkedin size={30}/>
                                     </Stack>
 

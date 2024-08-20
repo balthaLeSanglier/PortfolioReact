@@ -20,6 +20,28 @@ declare module '@mui/lab/TimelineDot' {
 }
 
 declare module '@mui/material/styles' {
+  interface TypographyVariants {
+    header: React.CSSProperties;
+    body3: React.CSSProperties;
+  }
+
+  // allow configuration using `createTheme`
+  interface TypographyVariantsOptions {
+    header?: React.CSSProperties;
+    body3?: React.CSSProperties;
+
+  }
+}
+
+// Update the Typography's variant prop options
+declare module '@mui/material/Typography' {
+  interface TypographyPropsVariantOverrides {
+    header: true;
+    body3:true;
+  }
+}
+
+declare module '@mui/material/styles' {
   interface BreakpointOverrides {
     xs: true; // removes the `xs` breakpoint
     sm: true;

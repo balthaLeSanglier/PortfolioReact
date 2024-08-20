@@ -160,7 +160,7 @@ const CompetencyAdministrerTable = () => {
                     <TableHead>
                         <TableRow>
                             <TableCell />
-                            {matches ? <TableCell> code</TableCell> : ""}
+                            {matches ? <TableCell> Code</TableCell> : ""}
                             <TableCell align="left">Nom</TableCell>
                             <TableCell align="center">Niveau</TableCell>
                         </TableRow>
