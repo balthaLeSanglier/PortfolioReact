@@ -1,5 +1,5 @@
 import { Grid, IconButton, Stack, Typography, useMediaQuery } from "@mui/material";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Project from "./Project";
 
 import listProjet, { CompetencesProjetType, ProjectType } from "./ProjectList";
@@ -9,24 +9,23 @@ import { BsThreeDots } from "react-icons/bs";
 import { FaXmark } from "react-icons/fa6";
 
 const Projects: React.FC = () => {
-  const matches = useMediaQuery('(min-width:1600px)');
-  const [showAll, setShowAll] = useState(false);
+  const [numberOfProjects, setNumberOfProjects] = useState(5);
   const reversedProjects = listProjet.reverse();
   const elementRef = useRef<HTMLDivElement | null>(null);
 
-  const handleClick = () => {
-    if(showAll) {
-      setShowAll(false)
-      elementRef.current?.scrollIntoView()
-
+  const handleShowMore = () => {
+    if (numberOfProjects < reversedProjects.length) {
+      setNumberOfProjects(prev => prev + 5);
     }
-    else {
-      setShowAll(true)
+  };
 
-    }
-  }
+  const handleShowLess = () => {
+    setNumberOfProjects(5);
+    elementRef.current?.scrollIntoView();
+  };
 
-  const displayedProjetcts = showAll ? reversedProjects : reversedProjects.slice(0, 5);
+  const displayedProjects = reversedProjects.slice(0, numberOfProjects);
+  
   return (
     <section id="Projects" ref={elementRef}>
       <ScrollReveal>
@@ -34,9 +33,9 @@ const Projects: React.FC = () => {
           <Typography variant="h2">PROJETS</Typography>
         </span>
         <Grid container direction={"row"} justifyContent={'center'} spacing={8}>
-          <Grid item spacing={8} direction="row" container justifyContent={"center"} >
-            {displayedProjetcts.map((projet, index) => (
-              <Grid item xxl={6} lg={12} width={"100%"}>
+          <Grid item spacing={8} direction="row" container justifyContent={"center"}>
+            {displayedProjects.map((projet, index) => (
+              <Grid item xxl={6} lg={12} width={"100%"} key={index}>
                 <Project
                   description={projet.description}
                   icon={projet.icon}
@@ -44,24 +43,25 @@ const Projects: React.FC = () => {
                   skills={projet.skills}
                   techs={projet.techs}
                   title={projet.title}
-                  key={index}
                   gitLink={projet.gitLink}
                   competencesProjet={projet.competencesProjet}
                 />
               </Grid>
-
-
             ))}
-
           </Grid>
           <Grid item>
-            <IconButton onClick={handleClick} sx={{ backgroundColor: "white" }}>
-              {showAll ? <FaXmark size={50}></FaXmark> : <BsThreeDots size={50}></BsThreeDots>}
-            </IconButton>
+            {numberOfProjects < reversedProjects.length ? (
+              <IconButton onClick={handleShowMore} sx={{ backgroundColor: "white" }}>
+                <BsThreeDots size={50} />
+              </IconButton>
+            ) : (
+              <IconButton onClick={handleShowLess} sx={{ backgroundColor: "white" }}>
+                <FaXmark size={50} />
+              </IconButton>
+            )}
           </Grid>
         </Grid>
       </ScrollReveal>
-
     </section>
   );
 };
