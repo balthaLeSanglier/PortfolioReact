@@ -8,7 +8,7 @@ type Props = {
 const TechsPanel: React.FC<Props> = ({children, title}) => {
     return (
             <Stack className="SkillsPanel" spacing={2} direction="column" alignItems={"center"} flex={1}>
-            <Typography variant="h5">{title}</Typography>
+            <Typography variant="body3">{title}</Typography>
 
             {children}
             </Stack>

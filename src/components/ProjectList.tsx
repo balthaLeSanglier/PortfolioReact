@@ -14,6 +14,7 @@ import reseauImage from "../assets/reseauImage.png"
 import powerBiImage from "../assets/powerBiImage.jpeg"
 import s3Image from "../assets/s3Image.png"
 import weatherClearImage from "../assets/weatherClearImage.png"
+import symfonyImage from "../assets/symfonyImage.png"
 import { ReactNode } from "react";
 import { FaBook, FaCalendar, FaCookieBite, FaDatabase, FaDollarSign, FaEuroSign, FaGift, FaHtml5, FaInfo, FaKey, FaList, FaMap, FaMapPin, FaServer, FaToolbox } from "react-icons/fa";
 import { FaBandage, FaC } from "react-icons/fa6";
@@ -400,7 +401,7 @@ const saeSymfony: ProjectType = {
     ],
     description: "Projet Symfony de gestion de liste de course",
     icon: <FaList></FaList>,
-    image: s3Image,
+    image: symfonyImage,
     skills: [
         "Adopter de bonnes pratiques de conception et de programmation",
         "Appliquer des principes d’accessibilité et d’ergonomie",
