@@ -8,18 +8,25 @@ const Header: React.FC = () => {
   const matches = useMediaQuery('(min-width:600px)');
   const [small, setSmall] = useState<boolean>(false)
   const [menuClick, setMenuClick] = useState<boolean>(false)
+  var lastScrollTop = 0;
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      var isHidden = window.scrollY > 200
-      if(menuClick) {
-        setSmall(false)
-      }
-      if(!menuClick) {
-        setSmall(isHidden)
-
-      }
-      console.log("smallScroll "+small)
-
+      var st = window.scrollY || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+      console.log("st : "+(st > lastScrollTop))
+      if (!(st > lastScrollTop)) {
+        var isHidden = window.scrollY > 200
+        if(menuClick) {
+          setSmall(false)
+        }
+        if(!menuClick) {
+          setSmall(isHidden)
+  
+        }  
+      } else {
+     setSmall(false)
+      } // else was horizontal scroll
+      lastScrollTop = st // For Mobile or negative scrolling
+      
     }
     );
   }, [])
@@ -27,17 +34,12 @@ const Header: React.FC = () => {
   const handleMenuClick = () => {
     setMenuClick(true)
     setSmall(false)
-    console.log("smallClick "+small)
 
     setTimeout(() => {
       setSmall(false)
 
       setMenuClick(false)
-      console.log("menuClick "+menuClick);
-      console.log("menuSmall "+small)
     }, 1000);
-    console.log("smallClick "+small)
-
   }
   if (!matches) {
     return (
